@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: black;
+    background-image: linear-gradient(to right bottom, black, red, green, yellow);
     color: green;
     padding: 10px;
     font-size: 16pt;
@@ -18,4 +18,25 @@ footer {
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+}
+
+a {
+    text-decoration: none; 
+    color: green
+}
+
+a:visited {
+    color: blueviolet;
+    background-color: whitesmoke;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: whitesmoke;
+}
+
+a:active {
+    color: palevioletred;
+    background-color: greenyellow;
 }
