@@ -1,0 +1,84 @@
+[33mcommit 3c10fc5b6e4584973c21037a0cf14a87afb61068[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Al-Bear-san <k.kadzuta@mail.ru>
+Date:   Wed Feb 22 11:00:08 2023 +0700
+
+    Лабораторная работа 2
+
+[33mcommit dc1a7d8876e6d7a5a6ff1bd89dd43c6a7751f785[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 13:17:41 2023 +0700
+
+    Форматирование текста
+
+[33mcommit 4f4eaafa75f2bf8941a0f34e5048f64019cc89c5[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 12:55:01 2023 +0700
+
+    Структура документа
+
+[33mcommit 7331bab6d0b34827fa984b8cafbd516c003efa4d[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 12:47:39 2023 +0700
+
+    Добавлены картинки
+
+[33mcommit 2719fd4f347ccbf940045ff5b7c6df469db462cc[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 12:41:24 2023 +0700
+
+    Абзац
+
+[33mcommit 1201734f69ca236eea6a58baaeecbf4518348240[m
+Merge: 316607d 05d4dab
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 12:38:12 2023 +0700
+
+    Merge branch 'main' of https://github.com/Al-Bear-san/web-programming-labs
+
+[33mcommit 05d4dab0ce021d508e3e8a8edafa3f3581a49e84[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Al-Bear-san <124755294+Al-Bear-san@users.noreply.github.com>
+Date:   Wed Feb 8 12:36:26 2023 +0700
+
+    Добавлены файлы “дисконт”
+
+[33mcommit 316607df752cba91c44fa6a92a236c1a2617112d[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 12:29:13 2023 +0700
+
+    Абзац
+
+[33mcommit a951dcffeb1e925d5d9f7ecf6ae68a003ea56f65[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 12:19:07 2023 +0700
+
+    Выделение жирным
+
+[33mcommit 82bad89dd35bf563a3ef459729249ec9dff3c941[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 11:47:42 2023 +0700
+
+    Выделение курсивом слова скидка
+
+[33mcommit f7fed65503f4d13f1a4d3b81248ee61ef680ebf8[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 11:46:49 2023 +0700
+
+    Выделение курсивом слова скидка
+
+[33mcommit 48f4c62930bddf115da3d2e07148f239f3d36cf5[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 11:45:05 2023 +0700
+
+    Выделение курсивом слова discount
+
+[33mcommit 3d0522f76b5dcd8b722e93a33be30715deb6535b[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 11:42:49 2023 +0700
+
+    Определение дисконта
+
+[33mcommit ca24c08d14efd03254cd266fe6c8e7a7c3f820fc[m
+Author: Сыпченко Александр <k.kadzuta@mail.ru>
+Date:   Wed Feb 8 11:32:46 2023 +0700
+
+    Лабораторная работа 1
