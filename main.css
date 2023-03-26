@@ -48,3 +48,23 @@ a:active {
     color: palevioletred;
     background-color: greenyellow;
 }
+
+header:hover{
+    transition: 0.55s;
+    background-image: linear-gradient(to right bottom, rgb(255, 255, 255), rgb(0, 247, 255), rgb(2, 0, 128), rgb(212, 0, 255));
+    color:aliceblue;
+}
+
+footer:hover{
+    transition: 0.75s;
+    background: rgba(141, 160, 155, 0.5);
+    color:aliceblue;
+}
+
+header:active{
+    transform: scale(0.75);
+}
+
+footer:active{
+    transform: scale(0.75);
+}
