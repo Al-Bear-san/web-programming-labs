@@ -23,7 +23,7 @@ footer {
 a {
     text-decoration: none; 
     color: green;
-    transition: 0.5s;
+    transition: 4.5s;
     text-shadow: 2px 2px 1px rgb(228, 220, 220);
 }
 
@@ -38,10 +38,6 @@ a:hover {
     color: red;
     background-color: whitesmoke;
     transition: 0.2s;
-}
-
-a:not(:hover) {
-    transition: 4.5s;
 }
 
 a:active {
@@ -61,10 +57,6 @@ footer:hover{
     color:aliceblue;
 }
 
-header:active{
-    transform: scale(0.75);
-}
-
-footer:active{
+header:active, footer:active{
     transform: scale(0.75);
 }
