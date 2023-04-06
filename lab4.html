@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,26 @@
     <link rel="stylesheet" href="main.css">
     <style>
         div {
-        margin: 20px;
-        border: 1px solid;
-        border-radius: 7px;
-        padding: 7px;
-        width: 500px;
-        height: 120px;
-        overflow-y: auto;
-        overflow-x: hidden;
+            margin: 20px;
+            border: 1px solid;
+            border-radius: 7px;
+            padding: 7px;
+            width: 500px;
+            height: 120px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+            background: rgb(197, 182, 226);
+            z-index: 2;
+        }
+        .second {
+            left: 380px; 
+            top: 120px; 
+            position: fixed; 
+            z-index: 1;
+        }
+        .second:hover {
+            z-index: 3;
         }
     </style>
 </head>
@@ -33,7 +45,7 @@
             Всё расставлено по возрастанию сложности: как в учебнике, только интересно.
         </div>
 
-        <div>
+        <div class="second">
             В первой главе я задаю тон всей книге: это в первую очередь развлечение для скучающих гопников-интеллектуалов. 
             Мы с моими маленькими читателями попробуем представить себе мир как инженерную схему, этакий мысленный каркас. 
             Я пишу о том, что бывает, когда схема несовершенна, и почему банки, а не негры потеряли дома во время ипотечного кризиса. 
