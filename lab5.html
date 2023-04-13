@@ -50,7 +50,15 @@
 
         function showAuthor() {
             let auhtor = 'Bonjour, mon ami\nこんにちは、私の友人\nАвтор страницы:\nСыпченко Александр Евгеньевич';
-            alert(auhtor)
+            alert(auhtor);
+        }
+
+        function changeOutput(buttonNum, backColor, textColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderRadius = '5px';
         }
     </script>
     
@@ -65,6 +73,11 @@
             border: 1px solid;
             border-radius: 7px;
             padding: 3px;
+        }
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -82,6 +95,15 @@
         <div class="message" onclick="showChast()">Найти частное чисел</div>
 
         <div class="message" onclick="showAuthor()">"Узнать, кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка №1" onclick="changeOutput(1, 'red', 'white')">
+            <input type="button" value="Кнопка №2" onclick="changeOutput(2, 'black', 'lime')">
+            <input type="button" value="Кнопка №3" onclick="changeOutput(3, '#1E5FC6', '#EAC300')">
+            <input type="button" value="Кнопка №4" onclick="changeOutput(4, '#000000', '#FFFFFF')">
+        </div>
+
+        <did id="output"></did>
     </main>
 
     <footer onclick="showAuthor()">
