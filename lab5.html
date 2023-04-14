@@ -60,6 +60,22 @@
             output.style.color = textColor;
             output.style.borderRadius = '5px';
         }
+
+        function showSumPok() {
+            let inputK1 = document.getElementById('Kol1');
+            let inputK2 = document.getElementById('Kol2');
+            let inputK3 = document.getElementById('Kol3');
+            let inputK4 = document.getElementById('Kol4');
+            let inputK5 = document.getElementById('Kol5');
+
+            let k1 = parseInt(inputK1.value);
+            let k2 = parseInt(inputK2.value);
+            let k3 = parseInt(inputK3.value);
+            let k4 = parseInt(inputK4.value);
+            let k5 = parseInt(inputK5.value);
+            let result = k1 * 703 + k2 * 781 + k3 * 526 + k4 * 2690 + k5 * 578;
+            document.getElementById("Summ").textContent = result
+        }
     </script>
     
     <style>
@@ -78,6 +94,19 @@
             border: 1px solid;
             width: 300px;
             height: 40px;
+            visibility: hidden !important;
+        }
+        .korzina {
+            border: 1px solid;
+            width: 220px;
+            height: auto;
+            border-radius: 15px;
+            padding: 15px;
+            display: inline-block;
+            margin: 20px;
+        }
+        .Tovar {
+            padding: 10px;
         }
     </style>
 </head>
@@ -94,7 +123,7 @@
         <div class="message" onclick="showProz()">Найти произведение чисел</div>
         <div class="message" onclick="showChast()">Найти частное чисел</div>
 
-        <div class="message" onclick="showAuthor()">"Узнать, кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
 
         <div>
             <input type="button" value="Кнопка №1" onclick="changeOutput(1, 'red', 'white')">
@@ -104,6 +133,18 @@
         </div>
 
         <did id="output"></did>
+
+        <div class="korzina">
+            <p style="font-size:30px; margin-bottom:20px; margin-top:5px">Корзина</p>
+            <label>Мыло для бритья (1шт/703р)<br><input style="margin-bottom:15px" type="number" value="1" id="Kol1"></label><br>
+            <label>Чаша керамическая для бритья (1шт/781р)<br><input style="margin-bottom:15px" type="number" value="1" id="Kol2"></label><br>
+            <label>Помазок для бритья (1шт/526р)<br><input style="margin-bottom:15px" type="number" value="1" id="Kol3"></label><br>
+            <label>Т образный станок (1шт/2690р)<br><input style="margin-bottom:15px" type="number" value="1" id="Kol4"></label><br>
+            <label>Лосьон после бритья (1шт/578р)<br><input style="margin-bottom:15px" type="number" value="1" id="Kol5"></label><br>
+            <div class="message" onclick="showSumPok()">Рассчитать</div>
+            <div>Общая сумма: </div>
+            <div id="Summ">0</div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
