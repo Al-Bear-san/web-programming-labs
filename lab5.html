@@ -76,6 +76,9 @@
             let result = k1 * 703 + k2 * 781 + k3 * 526 + k4 * 2690 + k5 * 578;
             document.getElementById("Summ").textContent = result
         }
+        function NumClik(btn) {
+            btn.style.display='table-column';
+        }
     </script>
     
     <style>
@@ -107,6 +110,16 @@
         }
         .Tovar {
             padding: 10px;
+        }
+        .krug {
+        cursor: pointer;
+        width: 50px; 
+        height: 50px;
+        border: 1px solid;
+        border-radius: 25px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 27px;
         }
     </style>
 </head>
@@ -145,6 +158,21 @@
             <div>Общая сумма: </div>
             <div id="Summ">0</div>
         </div>
+
+        <table>
+            <tr>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #e28f8f;">1</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #c9a283;">2</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #c9c283;">3</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #b0c983;">4</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #83A7C9;">5</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #83c983;">6</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #83c9ae;">7</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #83c1c9;">8</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #8396c9;">9</div></td>
+                <td><div align="center" class="krug" onclick="NumClik(this)" style="background: #9683c9;">10</div></td>
+            </tr>
+        </table>
     </main>
 
     <footer onclick="showAuthor()">
