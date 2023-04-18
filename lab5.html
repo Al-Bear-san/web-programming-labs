@@ -94,10 +94,12 @@
             padding: 3px;
         }
         #output {
-            border: 1px solid;
+            border: 0px solid;
             width: 300px;
             height: 40px;
-            visibility: hidden !important;
+            margin: 10px;
+            padding: 5px;
+            font-size: 30px;
         }
         .korzina {
             border: 1px solid;
@@ -112,14 +114,14 @@
             padding: 10px;
         }
         .krug {
-        cursor: pointer;
-        width: 50px; 
-        height: 50px;
-        border: 1px solid;
-        border-radius: 25px;
-        text-align: center;
-        line-height: 50px;
-        font-size: 27px;
+            cursor: pointer;
+            width: 50px; 
+            height: 50px;
+            border: 1px solid;
+            border-radius: 25px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 27px;
         }
     </style>
 </head>
@@ -145,8 +147,8 @@
             <input type="button" value="Кнопка №4" onclick="changeOutput(4, '#000000', '#FFFFFF')">
         </div>
 
-        <did id="output"></did>
-
+        <div align="center" id="output"></div>
+        
         <div class="korzina">
             <p style="font-size:30px; margin-bottom:20px; margin-top:5px">Корзина</p>
             <label>Мыло для бритья (1шт/703р)<br><input style="margin-bottom:15px" type="number" value="1" id="Kol1"></label><br>
