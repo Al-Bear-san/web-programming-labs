@@ -16,6 +16,27 @@
             margin: 15px auto;
             text-align: center;
         }
+
+        .pravila {
+            border: 1px solid;
+            border-radius: 15px;
+            width: 600px;
+            padding: 15px;
+            margin: 15px auto;
+            text-align: left;
+            background-color: aliceblue;
+        }
+
+        .text,
+            input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked ~ .text {
+            display: block;
+        }
+
+
     </style>
 
     <script>
@@ -88,6 +109,21 @@
             </div>
             <div>
                 <button onclick="again()">Сыграть ещё раз</button>
+            </div>
+        </div>
+
+        <div class="pravila">
+            <div>
+                <label for="pseudoBtn" style="border: 1px solid; padding: 1px; background-color: #DEDEDE; color: black;">Показать правила игры</label>
+                <input type="checkbox" id="pseudoBtn">
+                <div class="text">
+                    <br>
+                    A. Нажмите кнопку "Сыграть в игру"<br>
+                    B. Если на экране "Вы ввели слишком маленькое число" увеличте число<br>
+                    C. Если на экране "Вы ввели слишком большое число" уменьшите число<br>
+                    D. Если хотите играть, играйте<br>
+                    E. Если захотите ещё раз сыграть, то нажмите "Сыграть ещё раз"
+                </div>
             </div>
         </div>
     </main>
