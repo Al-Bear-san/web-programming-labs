@@ -36,7 +36,15 @@
             display: block;
         }
 
-
+        .color {
+            border: 1px solid;
+            border-radius: 15px;
+            width: 220px;
+            padding: 25px;
+            text-align: center;
+            background-color: yellow;
+            color: royalblue;
+        }
     </style>
 
     <script>
@@ -73,6 +81,33 @@
             screens[1].style.display = 'block';
             screens[2].style.display = 'none';
             number = Math.floor(Math.random() * 100) + 1;
+        }
+        function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow'){
+                div.style.backgroundColor = 'red';
+                div.style.color = 'green';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if(div.style.backgroundColor == 'red'){
+                div.style.backgroundColor = 'black';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'чёрный';
+            }
+            else if(div.style.backgroundColor == 'black'){
+                div.style.backgroundColor = 'white';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'белый';
+            }
+            else  if(div.style.backgroundColor == 'white'){
+                div.style.backgroundColor = 'rosybrown';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'кремовый';
+            }
+            else{
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'royalblue';
+                document.getElementById('color-name').innerHTML = 'жёлтый';
+            }
         }
     </script>
 </head>
@@ -113,18 +148,21 @@
         </div>
 
         <div class="pravila">
-            <div>
-                <label for="pseudoBtn" style="border: 1px solid; padding: 1px; background-color: #DEDEDE; color: black;">Показать правила игры</label>
-                <input type="checkbox" id="pseudoBtn">
-                <div class="text">
-                    <br>
-                    A. Нажмите кнопку "Сыграть в игру"<br>
-                    B. Если на экране "Вы ввели слишком маленькое число" увеличте число<br>
-                    C. Если на экране "Вы ввели слишком большое число" уменьшите число<br>
-                    D. Если хотите играть, играйте<br>
-                    E. Если захотите ещё раз сыграть, то нажмите "Сыграть ещё раз"
-                </div>
+            <label for="pseudoBtn" style="border: 1px solid; padding: 1px; background-color: #DEDEDE; color: black;">Показать правила игры</label>
+            <input type="checkbox" id="pseudoBtn">
+            <div class="text">
+                <br>
+                A. Нажмите кнопку "Сыграть в игру"<br>
+                B. Если на экране "Вы ввели слишком маленькое число" увеличте число<br>
+                C. Если на экране "Вы ввели слишком большое число" уменьшите число<br>
+                D. Если хотите играть, играйте<br>
+                E. Если захотите ещё раз сыграть, то нажмите "Сыграть ещё раз"
             </div>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">жёлтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
     </main>
 
