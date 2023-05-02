@@ -45,6 +45,22 @@
             background-color: yellow;
             color: royalblue;
         }
+
+        .beg {
+            border: 1px solid;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            background-color: burlywood;
+            color: black;
+            float: left;
+            margin: 10px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
     </style>
 
     <script>
@@ -109,6 +125,17 @@
                 document.getElementById('color-name').innerHTML = 'жёлтый';
             }
         }
+
+        function begi(div) {
+            if(div.style.float == 'left') {
+                div.style.float = 'right';
+                div.style.trasformation = 'rotate(4turn)';
+            }
+            else {
+                div.style.float = 'left';
+                div.style.trasformation = 'rotate(0)';
+            }
+        }
     </script>
 </head>
 
@@ -163,6 +190,9 @@
         <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="color-name">жёлтый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
+        </div>
+        <div class="beg" onclick="begi(this)">
+            <div>Щёлкни меня</div>
         </div>
     </main>
 
