@@ -61,6 +61,21 @@
             justify-content: center;
             align-items: center
         }
+
+        .shir {
+            border: 1px solid;
+            width: 100px;
+            height: 15px;
+            background-color: burlywood;
+            color: black;
+            margin-top: 175px;
+            margin-left: 10px auto;
+        }
+
+        #wear {
+            width: 270px;
+            margin: 10px;
+        }
     </style>
 
     <script>
@@ -91,9 +106,9 @@
                 document.getElementById('try-count').innerHTML = count;
             }
         }
-        function again(params) {
+        function again() {
             let screens = document.getElementsByClassName('game');
-            let count = 0;
+            count = 0;
             screens[1].style.display = 'block';
             screens[2].style.display = 'none';
             number = Math.floor(Math.random() * 100) + 1;
@@ -129,11 +144,54 @@
         function begi(div) {
             if(div.style.float == 'left') {
                 div.style.float = 'right';
-                div.style.trasformation = 'rotate(4turn)';
+                div.style.transform = 'rotate(4turn)';
             }
             else {
                 div.style.float = 'left';
-                div.style.trasformation = 'rotate(0)';
+                div.style.transform = 'rotate(0)';
+            }
+        }
+
+        let zs = 100;
+        function razshir(div) {
+            zs += 50;
+            div.style.width = zs+'px';
+            if (zs == 1000){
+                zs = 100;
+            }
+        }
+
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == 'Красный' && type == 'Футболка'){
+                wear.src = 'red-f.jpg';
+            }
+            if(color == 'Белый' && type == 'Футболка'){
+                wear.src = 'white-f.jpg';
+            }
+            if(color == 'Чёрный' && type == 'Футболка'){
+                wear.src = 'black-f.jpg';
+            }
+            if(color == 'Красный' && type == 'Поло'){
+                wear.src = 'red-p.jpg';
+            }
+            if(color == 'Белый' && type == 'Поло'){
+                wear.src = 'white-p.jpg';
+            }
+            if(color == 'Чёрный' && type == 'Поло'){
+                wear.src = 'black-p.jpg';
+            }
+            if(color == 'Красный' && type == 'Майка'){
+                wear.src = 'red-m.jpg';
+            }
+            if(color == 'Белый' && type == 'Майка'){
+                wear.src = 'white-m.jpg';
+            }
+            if(color == 'Чёрный' && type == 'Майка'){
+                wear.src = 'black-m.jpg';
             }
         }
     </script>
@@ -193,6 +251,28 @@
         </div>
         <div class="beg" onclick="begi(this)">
             <div>Щёлкни меня</div>
+        </div>
+
+        <div class="shir" onclick="razshir(this)"></div>
+
+        <div class="game" style="float: left;">
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">OK</button><br>
+
+            <img id="wear">
         </div>
     </main>
 
