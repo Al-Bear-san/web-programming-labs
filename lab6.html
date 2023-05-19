@@ -27,13 +27,8 @@
             background-color: aliceblue;
         }
 
-        .text,
-            input[type="checkbox"] {
+        #pravil_2 {
             display: none;
-        }
-
-        input[type="checkbox"]:checked ~ .text {
-            display: block;
         }
 
         .color {
@@ -50,6 +45,7 @@
             border: 1px solid;
             width: 150px;
             height: 150px;
+            border-radius: 10px;
             text-align: center;
             background-color: burlywood;
             color: black;
@@ -59,13 +55,14 @@
             cursor: pointer;
             display: flex;
             justify-content: center;
-            align-items: center
+            align-items: center;
         }
 
         .shir {
             border: 1px solid;
             width: 100px;
-            height: 15px;
+            height: 25px;
+            border-radius: 5px;
             background-color: burlywood;
             color: black;
             margin-top: 175px;
@@ -87,6 +84,7 @@
             screens[0].style.display = 'none';
             screens[1].style.display = 'block';
         }
+
         function guess() {
             count++;
             let input = document.getElementById('user-number');
@@ -106,6 +104,7 @@
                 document.getElementById('try-count').innerHTML = count;
             }
         }
+
         function again() {
             let screens = document.getElementsByClassName('game');
             count = 0;
@@ -113,6 +112,18 @@
             screens[2].style.display = 'none';
             number = Math.floor(Math.random() * 100) + 1;
         }
+        
+        function PPI() {
+            let scrin = document.getElementsByClassName('pravila');
+            scrin[0].style.display = 'none';
+            scrin[1].style.display = 'block';
+        }
+        function SPI() {
+            let scrin = document.getElementsByClassName('pravila');
+            scrin[0].style.display = 'block';
+            scrin[1].style.display = 'none';
+        }
+
         function changeColor(div) {
             if(div.style.backgroundColor == 'yellow'){
                 div.style.backgroundColor = 'red';
@@ -145,6 +156,7 @@
             if(div.style.float == 'left') {
                 div.style.float = 'right';
                 div.style.transform = 'rotate(4turn)';
+                div.style.transition = '1s';
             }
             else {
                 div.style.float = 'left';
@@ -233,16 +245,18 @@
         </div>
 
         <div class="pravila">
-            <label for="pseudoBtn" style="border: 1px solid; padding: 1px; background-color: #DEDEDE; color: black;">Показать правила игры</label>
-            <input type="checkbox" id="pseudoBtn">
-            <div class="text">
-                <br>
-                A. Нажмите кнопку "Сыграть в игру"<br>
-                B. Если на экране "Вы ввели слишком маленькое число" увеличте число<br>
-                C. Если на экране "Вы ввели слишком большое число" уменьшите число<br>
-                D. Если хотите играть, играйте<br>
-                E. Если захотите ещё раз сыграть, то нажмите "Сыграть ещё раз"
-            </div>
+            <label for="pseudoBtn" style="border: 1px solid; padding: 1px; background-color: #DEDEDE; color: black;" onclick="PPI()">Показать правила игры</label>
+        </div>
+
+        <div class="pravila" id="pravil_2">
+            <label for="pseudoBtn" style="border: 1px solid; padding: 1px; background-color: #DEDEDE; color: black;" onclick="SPI()">Скрыть правила игры</label>
+            <ol type="A">
+                <li>Нажмите кнопку "Сыграть в игру"</li>
+                <li>Если на экране "Вы ввели слишком маленькое число" увеличте число</li>
+                <li>Если на экране "Вы ввели слишком большое число" уменьшите число</li>
+                <li>Если хотите играть, играйте</li>
+                <li>Если захотите ещё раз сыграть, то нажмите "Сыграть ещё раз"</li>
+            </ol>
         </div>
 
         <div class="color" ondblclick="changeColor(this)">
